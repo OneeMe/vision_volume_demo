@@ -12,8 +12,9 @@ struct vision_volume_demoApp: App {
             ContentView()
         }
 
-        ImmersiveSpace(id: "ImmersiveSpace") {
-            ImmersiveView()
+        WindowGroup(id: "Volume") {
+            VolumeView()
         }
+        .windowStyle(.volumetric)
     }
 }

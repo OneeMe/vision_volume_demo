@@ -3,17 +3,16 @@
 // Created by: onee on 2024/3/20
 //
 
-import SwiftUI
 import RealityKit
 import RealityKitContent
+import SwiftUI
 
 struct ContentView: View {
+    @State private var showVolume = false
+    @State private var volumeIsShown = false
 
-    @State private var showImmersiveSpace = false
-    @State private var immersiveSpaceIsShown = false
-
-    @Environment(\.openImmersiveSpace) var openImmersiveSpace
-    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    @Environment(\.openWindow) var openWindow
+    @Environment(\.dismissWindow) var dismissWindow
 
     var body: some View {
         VStack {
@@ -22,29 +21,20 @@ struct ContentView: View {
 
             Text("Hello, world!")
 
-            Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
+            Toggle("Show Volume", isOn: $showVolume)
                 .font(.title)
                 .frame(width: 360)
                 .padding(24)
                 .glassBackgroundEffect()
         }
         .padding()
-        .onChange(of: showImmersiveSpace) { _, newValue in
-            Task {
-                if newValue {
-                    switch await openImmersiveSpace(id: "ImmersiveSpace") {
-                    case .opened:
-                        immersiveSpaceIsShown = true
-                    case .error, .userCancelled:
-                        fallthrough
-                    @unknown default:
-                        immersiveSpaceIsShown = false
-                        showImmersiveSpace = false
-                    }
-                } else if immersiveSpaceIsShown {
-                    await dismissImmersiveSpace()
-                    immersiveSpaceIsShown = false
-                }
+        .onChange(of: showVolume) { _, newValue in
+            if newValue {
+                openWindow(id: "Volume")
+                volumeIsShown = true
+            } else if volumeIsShown {
+                dismissWindow(id: "Volume")
+                volumeIsShown = false
             }
         }
     }

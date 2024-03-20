@@ -10,9 +10,10 @@
 		BD5A7B872BAA648E00D68BF5 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = BD5A7B862BAA648E00D68BF5 /* RealityKitContent */; };
 		BD5A7B892BAA648E00D68BF5 /* vision_volume_demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5A7B882BAA648E00D68BF5 /* vision_volume_demoApp.swift */; };
 		BD5A7B8B2BAA648E00D68BF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5A7B8A2BAA648E00D68BF5 /* ContentView.swift */; };
-		BD5A7B8D2BAA648E00D68BF5 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5A7B8C2BAA648E00D68BF5 /* ImmersiveView.swift */; };
+		BD5A7B8D2BAA648E00D68BF5 /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5A7B8C2BAA648E00D68BF5 /* VolumeView.swift */; };
 		BD5A7B8F2BAA648F00D68BF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD5A7B8E2BAA648F00D68BF5 /* Assets.xcassets */; };
 		BD5A7B922BAA648F00D68BF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD5A7B912BAA648F00D68BF5 /* Preview Assets.xcassets */; };
+		BD5A7B9B2BAA651800D68BF5 /* RealityBounds in Frameworks */ = {isa = PBXBuildFile; productRef = BD5A7B9A2BAA651800D68BF5 /* RealityBounds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +21,7 @@
 		BD5A7B852BAA648E00D68BF5 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		BD5A7B882BAA648E00D68BF5 /* vision_volume_demoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vision_volume_demoApp.swift; sourceTree = "<group>"; };
 		BD5A7B8A2BAA648E00D68BF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		BD5A7B8C2BAA648E00D68BF5 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		BD5A7B8C2BAA648E00D68BF5 /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
 		BD5A7B8E2BAA648F00D68BF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD5A7B912BAA648F00D68BF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD5A7B932BAA648F00D68BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5A7B9B2BAA651800D68BF5 /* RealityBounds in Frameworks */,
 				BD5A7B872BAA648E00D68BF5 /* RealityKitContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,7 +62,7 @@
 			children = (
 				BD5A7B882BAA648E00D68BF5 /* vision_volume_demoApp.swift */,
 				BD5A7B8A2BAA648E00D68BF5 /* ContentView.swift */,
-				BD5A7B8C2BAA648E00D68BF5 /* ImmersiveView.swift */,
+				BD5A7B8C2BAA648E00D68BF5 /* VolumeView.swift */,
 				BD5A7B8E2BAA648F00D68BF5 /* Assets.xcassets */,
 				BD5A7B932BAA648F00D68BF5 /* Info.plist */,
 				BD5A7B902BAA648F00D68BF5 /* Preview Content */,
@@ -102,6 +104,7 @@
 			name = vision_volume_demo;
 			packageProductDependencies = (
 				BD5A7B862BAA648E00D68BF5 /* RealityKitContent */,
+				BD5A7B9A2BAA651800D68BF5 /* RealityBounds */,
 			);
 			productName = vision_volume_demo;
 			productReference = BD5A7B812BAA648E00D68BF5 /* vision_volume_demo.app */;
@@ -131,6 +134,9 @@
 				Base,
 			);
 			mainGroup = BD5A7B782BAA648E00D68BF5;
+			packageReferences = (
+				BD5A7B992BAA651800D68BF5 /* XCRemoteSwiftPackageReference "RealityBounds" */,
+			);
 			productRefGroup = BD5A7B822BAA648E00D68BF5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -159,7 +165,7 @@
 			files = (
 				BD5A7B8B2BAA648E00D68BF5 /* ContentView.swift in Sources */,
 				BD5A7B892BAA648E00D68BF5 /* vision_volume_demoApp.swift in Sources */,
-				BD5A7B8D2BAA648E00D68BF5 /* ImmersiveView.swift in Sources */,
+				BD5A7B8D2BAA648E00D68BF5 /* VolumeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,10 +366,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		BD5A7B992BAA651800D68BF5 /* XCRemoteSwiftPackageReference "RealityBounds" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/IvanMathy/RealityBounds";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		BD5A7B862BAA648E00D68BF5 /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
+		};
+		BD5A7B9A2BAA651800D68BF5 /* RealityBounds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD5A7B992BAA651800D68BF5 /* XCRemoteSwiftPackageReference "RealityBounds" */;
+			productName = RealityBounds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
